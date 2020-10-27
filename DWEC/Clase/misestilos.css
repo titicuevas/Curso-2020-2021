@@ -1,0 +1,59 @@
+body{
+    background: blue;
+    margin: 0%;
+    }
+    header{
+        background: aqua;
+    }
+    nav{
+        background-color: green !important;
+        height: 100px;
+        margin: auto;
+        padding: 30px,0,0;
+        
+    }
+    
+    b :hover{
+        float: left;
+    }
+
+    ul{
+        margin: auto;
+    }
+
+    li{
+        float: left;
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 25%;
+    }
+    nav {
+        background-color: hotpink;
+    }
+    section{
+        background-color: rgb(0, 0, 255);
+        width: 25%;
+        float: left;
+        height: 75wh;
+    }
+    aside{
+        background-color: rgba(165, 42, 42, 0.315);
+        width: 25%;
+        float: left;
+    }
+    footer{
+        background-color: grey;
+        float: left;
+    }
+    p{
+        background-color: chocolate;
+    }
+    
+    
+
+#miparrafo{
+    width: 200px;
+    height: 200px;
+}
+

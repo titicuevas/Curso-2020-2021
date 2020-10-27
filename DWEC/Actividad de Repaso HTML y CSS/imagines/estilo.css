@@ -1,0 +1,13 @@
+
+*{background-color: blue;
+padding: 0;
+margin: 0;
+-webkit-background-origin: border-box;
+background-origin: border-box;
+box-sizing: border-box;
+
+}
+
+.contendedor{
+    width: 95%;
+}

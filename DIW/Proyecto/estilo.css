@@ -1,0 +1,22 @@
+#h1 {
+    text-align: center;
+}
+
+#botones {
+    padding: 0;
+    text-align: center;
+}
+
+#botones li {
+    display: inline-block;
+}
+
+#botones li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    text-decoration: solid red;
+    float: left;
+    padding: 10px;
+    background-color: burlywood;
+    color: black;
+}

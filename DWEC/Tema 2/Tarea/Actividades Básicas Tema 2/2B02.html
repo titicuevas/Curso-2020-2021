@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2B02</title>
+</head>
+<body>
+<script>
+    var musicians = prompt ("Introduzca el numero de componentes del grupo");
+    
+    var resultado = componentes(musicians);
+    alert("El grupo es un "+resultado);
+
+    function componentes(musicians) {
+
+        if (musicians <=0) {
+            return "not a group";
+        } else if (musicians == 1) {
+            return "solo";
+            
+        } else if (musicians == 2) {
+            return "duet";
+            
+        }else if (musicians == 3) {
+            return "trio";
+            
+        }else if (musicians == 4) {
+            return "quartet";
+            
+        } else if (musicians >=4) {
+            return "thes es large group";
+            
+        }
+        
+    }
+
+
+
+</script>    
+</body>
+</html>
