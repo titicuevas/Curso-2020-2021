@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+
+<body>
+    <h1>El BOM</h1>
+    <p id="parrafo">
+        <iframe id="fr1" src="http://google.com" width="40%" height="200px"></iframe>
+        <iframe id="fr2" src="http://wikipedia.com" width="40%" height="200px"></iframe>
+    </p>
+</body>
+<script>
+    function objWindow() {
+        var cadena = "";
+        //Nombre de la ventana
+        window.name = "Mi ventana";
+        cadena += "<br/>Nombre: " + window.name;
+
+        //Tamaño de la ventana con scroll y tool
+        cadena += "<br/> Alto Externo:" + window.outerHeight;
+        cadena += "<br/> Ancho Externo:" + window.outerWidth;
+
+        //// Tamaño de la ventana sin csroll y tool 
+        cadena += "<br/> Alto Interior:" + window.innerHeight;
+        cadena += "<br/> Ancho Interior" + window.innerWidth;
+
+        //Posicion scroll. Devuelve el numero de pixeles donde se encuentre
+        cadena += "<br/> Alto Externo:" + window.screenX;
+        cadena += "<br/> Ancho Externo:" + window.screenY;
+
+        //Posicion de la esquina superior iizquierda
+        cadena += "<br/> Distancia desde left:" + window.screenX;
+        cadena += "<br/> Distacia desde top:" + window.screenY;
+
+        
+
+
+            document.getElementById("parrafo").innerHTML = cadena;
+
+
+
+    }
+
+    
+    objWindow();
+
+    window.onresize = objWindow;
+    //Propiedades iframe
+    cad2 = "";
+    cad2 += "<br/> El numero de frames de la pagina es :" + window.length; 
+    cad2 += "<br/> La pagina actual no esta insertada en el iframe :" + window.frameElement; 
+    cad2 += "<br/> La pagina actual no esta insertada en el iframe :" + window.frames[0].frameElement; 
+    cad2 += "<br/> La pagina actual no esta insertada en el iframe :" + window.frames[1].frameElement; 
+
+    cad2 +="<br/>"
+</script>
+
+</html>

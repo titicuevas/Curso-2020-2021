@@ -1,22 +1,71 @@
 body {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(20, 118, 209);
 }
 
-#Titulazo {
+main{
+    border-left: 150px;
+    border-right: 150px;
+    border-left: 150px;
+    border-left: 150px;
+    border: 5px;
+}
+h1 {
     background-image: url(imagenes/fondo.jpg);
+    height: 130px;
+    color: white;
+    margin-bottom: 50px;
 }
 
-#Titulo {
-    text-align: center;
+h2 {
+    text-align: left;
     text-decoration-line: underline;
+    border-bottom: 50px;
 }
 
 #menu {
-    text-align: right;
+    text-align: left;
+    float: right;
+    list-style-type: disc;
+    color: white;
 }
 
 #Esse {
+    margin-left: 10px;
+    text-transform: uppercase;
     color: red;
 }
 
-#essetext {}
+
+
+#Quis {
+    margin-top: 18%;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: red;
+    line-height: 50%;
+}
+
+#fecha {
+    color: green;
+    
+}
+
+#verde {
+    
+    margin-left: 9%;
+    margin-right: 14%;
+    font-size: larger;
+    
+}
+
+#insti {
+    color: red;
+}
+
+P.first-line {
+    color: green;
+}

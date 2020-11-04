@@ -8,12 +8,24 @@
 </head>
 
 <body>
-    var numero =[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
     <script>
-        let numero = 1;
-        while (numero < 20) {
-            console.log(`Numero: ${i}`);
-            numero++
+        var numero ;
+        numero = prompt("¿Que numero vas a introducir?")
+        while (numero <= 20) {
+            if (numero % 3 == 0) {
+                alert(numero + " Es un numero  divisible entre 3");
+
+            } else if (numero % 5 == 0) {
+                alert(numero + " Es un numero  divisible entre 5")
+
+            }  else if (numero % 3 == 0 && numero % 5 == 0){
+                alert(numero + " Es un numero divisible entre 3 y 5")
+            } else if (numero % 3 !=0 && numero % 5 !==0) {
+                alert(numero +"  No es divisible ni entre 3 o 5")
+            }
+
+            numero++;
 
         }
     </script>
