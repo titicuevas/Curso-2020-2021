@@ -1,0 +1,31 @@
+body {
+    background-color: green;
+}
+
+h2 {
+    background-color: rgb(46, 192, 107);
+    text-align: center;
+}
+
+fieldset {
+    margin-left: auto;
+    text-align: left;
+    background-color: rgb(111, 146, 57);
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+    margin-left: auto;
+    text-transform: uppercase;
+}
+
+legend {
+    text-align: center;
+    color: yellow;
+}
+
+img {
+    margin-left: auto;
+    border-radius: 100px;
+}

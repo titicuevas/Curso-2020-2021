@@ -19,12 +19,29 @@ es correcta. En otro caso, se muestra un mensaje indicando que el número y la l
 de DNI son correctos.-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2A06</title>
 </head>
+
 <body>
+    <script languaje="javascript" type="text/javascript">
+        function calcletra(dni) {
+            var JuegoCaracteres = "TRWAGMYFPDXBNJZSQVHLCKET";
+            var Posicion = dni % 23;
+            var Letra = JuegoCaracteres.charAt(Posicion);
+            return Letra;
+        }
+    </script>
     
+    <form name="letradni" action="">
+        DNI:<br>
+        <input type="text" name="numdni" maxlenght="9" size="9">
+        <input type="text" name="letra" size="1" readonly>
+        <input type="button" value="Ok" onclick="this.form.letra.value=calcletra(this.form.numdni.value);">
+    </form>
 </body>
+
 </html>

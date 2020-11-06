@@ -1,0 +1,68 @@
+body {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(20, 118, 209);
+}
+
+main {
+    border-left: 50px;
+    border-right: 50px;
+    border-left: 50px;
+    border-left: 50px;
+    border: 5px solid white;
+}
+
+h1 {
+    background-image: url(imagenes/fondo.jpg);
+    height: 130px;
+    color: white;
+    margin-bottom: 50px;
+    line-height: 100px;
+}
+
+h2 {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    font-size: 30px;
+    word-spacing: 12px;
+    border-bottom: 3px solid black;
+}
+
+#menu {
+    text-align: left;
+    float: right;
+    list-style-type: disc;
+    color: white;
+}
+
+#Esse {
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: red;
+}
+
+#Quis {
+    margin-top: 18%;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: red;
+    line-height: 50%;
+}
+
+#fecha {
+    color: green;
+}
+
+#verde {
+    margin-left: 9%;
+    margin-right: 14%;
+    font-size: larger;
+}
+
+#insti {
+    color: red;
+}
