@@ -19,10 +19,10 @@ variable,
 form,
 fieldset,
 blockquote {
-    padding: 0;
     margin: 0;
     font-size: 100%;
     font-weight: normal;
+    list-style: url(images/vineta.png);
 }
 
 table {
@@ -48,7 +48,7 @@ ol {
 }
 
 ul {
-    padding-left: 1.4em;
+    padding-left: 60px;
     list-style: square;
 }
 
@@ -76,11 +76,15 @@ q:after {
 }
 
 #anuncio {
+    background-image: url(images/perg_medio.jpg);
+    margin-top: 50px;
     margin-right: 600px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 #banner h1 {
+    margin-bottom: 100px;
+    background-image: url(images/fondo_pr.jpg);
     font: normal 48px Georgia, "Times New Roman", Times, serif;
     text-align: right;
     color: #272D32;
@@ -106,12 +110,14 @@ q:after {
 }
 
 #anuncio h2 {
+    background-image: url(images/perg-sup.jpg);
     font: italic bold normal 20px Georgia, "Times New Roman", Times, serif;
     text-align: center;
     color: #323A3F;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 18px;
+    float: unset;
 }
 
 #anuncio ul {
