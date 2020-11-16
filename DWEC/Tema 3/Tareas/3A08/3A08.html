@@ -1,14 +1,28 @@
+<!--8. Calcula el área de un círculo. El usuario debe indicar el valor del radio y debes mostrar por
+pantalla el siguiente mensaje bien formateado “El área de un círculo es XX.XX cm2”. Calcula
+también el área del triángulo.-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script type="text/javascript" src="3A08.js"></script>
+    <title>3A08</title>
+
 </head>
 
 <body>
+    <h1>Calcular área circulo</h1>
+    Introduzca el radio del circulo <input id="radio" />
+    <br>
+    <button onclick="calcularAreaCirculo(radio.value)">Calcular</button>
 
+    <h1>Calcular área triangulo</h1>
+    Introduzca la base del triangulo <input id="base" />
+    Introduzca la altura del triangulo <input id="altura" />
+    <br>
+    <button onclick="calcularAreaTriangulo(base.value, altura.value)">Calcular</button>
 </body>
 
 </html>

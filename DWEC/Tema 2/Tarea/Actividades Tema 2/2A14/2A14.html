@@ -1,0 +1,37 @@
+<!--Realiza un script que pida la contraseña de acceso a una página web y compruebe si es la
+misma que la almacenada en una variable. Si es correcta, le dará la bienvenida, sino se la
+volverá a pedir. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2A14</title>
+</head>
+
+<body>
+    <script>
+        
+        var contraseña = "betis";
+        var login=false;
+
+        while(!login){
+        var array = prompt("Introduce la contraseña");
+        if (array == contraseña) {
+            login=true;
+        } 
+        }
+
+        alert("Bienvenido a la Deep Web")
+        document.write("Bienvenido a la Deep Web")
+        
+
+
+
+    </script>
+
+</body>
+
+</html>

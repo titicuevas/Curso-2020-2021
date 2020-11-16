@@ -1,0 +1,37 @@
+<!--. Dado un array, con 6 elementos, dos valores booleanos, dos valores numéricos y dos
+cadenas de caracteres. Realizar un script que devuelva la siguiente información:
+Ejemplo: A partir del siguiente array que se proporciona:
+var valores = [true, 5, false, "hola", "adios", 2];
+- Determinar cuál de los dos elementos de texto es mayor
+- Determinar el resultado de dos operaciones lógicas realizadas con los elementos
+booleanos
+- Determinar el resultado de dos operaciones aritméticas realizadas con los elementos
+numéricos -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2A13</title>
+</head>
+
+<body>
+    <script>
+
+        var array = [true, false, "buenos", "dias", 10, 5];
+
+        alert(array[2].length > array[3].length ? "La primera cadena es mayor" : "La segunda cadena es mayor");
+        alert(array[0] && array[1]);
+        alert(array[0] || array[1]);
+        alert(array[4] + array[5]);
+        alert(array[4] * array[5]);
+
+
+
+    </script>
+
+</body>
+
+</html>

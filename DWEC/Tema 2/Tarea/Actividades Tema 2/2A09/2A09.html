@@ -1,0 +1,47 @@
+<!--Mini-diccionario de inglés
+Realiza un script que solicite al usuario introducir algunas de estas palabras (casa, mesa,
+perro, gato) para luego mostrar la palabra traducida en inglés. Por ejemplo, si se ingresa
+'casa' debemos mostrar el texto 'house' en la página-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2A09</title>
+</head>
+
+<body>
+    <script>
+        var palabra = prompt("Introduce una de las siguientes palabras para traducirla a ingles: casa, mesa , perro o gato");
+        switch (true) {
+            case (palabra == "casa"):
+                alert("house");
+                document.write("casa = house")
+                break;
+            case (palabra == "mesa"):
+                alert("table");
+                document.write("mesa = table")
+                break;
+            case (palabra == "perro"):
+                alert("dog");
+                document.write("perro = dog")
+                break;
+            case (palabra == "gato"):
+                alert("cat");
+                document.write("gato = cat")
+                break;
+            default:
+                alert("Esta palabra no esta en el diccionario");
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

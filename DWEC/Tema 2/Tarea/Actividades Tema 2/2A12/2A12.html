@@ -1,0 +1,85 @@
+<!--Realiza un script que muestre por pantalla un menú (utiliza console.log());
+“Calculadora”
+Pulse 1 para sumar
+Pulse 2 para restar
+Pulse 3 para multiplicar
+Pulse 4 para dividir
+Pulse 5 para obtener el módulo
+Pulse 6 para salir
+En función de la opción seleccionada realizará la operación y si pulsa la opción 6, con el
+botón confirm preguntar si está seguro de salir, si es que si cerrará la ventana si es que
+no, se volverá a elegir una opción del menú. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2A12</title>
+</head>
+
+<body>
+    <script>
+        var num1, num2;
+        var exit = false;
+        do {
+            calc();
+            opc = prompt("Introduzca una operacion : ");
+            switch (opc) {
+                case "1":
+                    param();
+                    console.log("Suma:  " + num1 + "+" + num2 + "=" + (num1 + num2) + "\n");
+                    break;
+                case "2":
+                    param();
+                    console.log("Resta:  " + num1 + "-" + num2 + "=" + (num1 - num2) + "\n");
+                    break;
+                case "3":
+                    param();
+                    console.log("Multiplicacion:  " + num1 + "*" + num2 + "=" + (num1 * num2) + "\n");
+                    break;
+                case "4":
+                    param();
+                    console.log("Division:  " + num1 + "/" + num2 + "=" + (num1 / num2) + "\n");
+                    break;
+                case "5":
+                    param();
+                    console.log("Modulo:  " + num1 + "%" + num2 + "=" + (num1 % num2) + "\n");
+                    break;
+                case "6":
+                    exit = confirm("¿Desea salir de la calculadora?");
+                    break;
+                default:
+                    console.log("Opcion no valida.\n")
+            }
+        } while (!exit);
+
+        function calc() {
+            console.log("Calculadora\n"
+                + "Pulse 1 para Sumar\n"
+                + "Pulse 2 para Restar\n"
+                + "Pulse 3 para Multiplicar\n"
+                + "Pulse 4 para Dividir\n"
+                + "Pulse 5 para Obtener el módulo\n"
+                + "Pulse 6 para Salir\n");
+        }
+
+        function param() {
+            do {
+                num1 = prompt("Introduzca la primera variable: ");
+            } while (isNaN(num1) && !num1);
+            num1 = Number(num1);
+
+            do {
+                num2 = prompt("Introduzca la segunda variable: ");
+            } while (isNaN(num2) && !num2);
+            num2 = Number(num2);
+            console.log("Variable 1 = " + num1 + "\nVariable 2 = " + num2 + "\n");
+        }
+
+    </script>
+
+</body>
+
+</html>

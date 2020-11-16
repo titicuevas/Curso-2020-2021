@@ -1,0 +1,45 @@
+<!--Realiza un script que muestre en el documento los múltiplos de 8 comprendidos entre
+dos números que se solicitarán al usuario. No importa el orden en el que los inserte el
+usuario, siempre se presentarán de menor al mayor, ambos inclusive. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2A04</title>
+</head>
+
+<body>
+    <script>
+        var num1 = prompt("Introduzca un numero");
+        var num2 = prompt("Introduzca un numero");
+        
+
+
+        function multiplo(num1 , num2) {
+                var resultado = "";
+                if (num2<num1) {
+                    resultado = num1;
+                    num1=num2;
+                    num2=resultado;
+                    resultado="";
+                }
+                for(var i = num1; i<=num2;i++){
+                    if (i%8==0) {
+                        resultado= resultado+""+i;
+                    }
+                    document.write("Este es el resultado");
+                }
+                return resultado;
+                
+        }
+
+
+    </script>
+
+</body>
+
+</html>

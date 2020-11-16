@@ -1,0 +1,35 @@
+<!--Realiza un script en el que un usuario introduzca una frase (ésta puede contener todo
+tipo de caracteres), ir mostrando todos los caracteres uno a uno, excepto si es un
+número que lo obviará. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2A10</title>
+</head>
+
+<body>
+    <script>
+        var frase = prompt("Introduce una frase");
+        var numeros = /^[0-9]+$/;
+
+        for (let i = 0; i < frase.length; i++) {
+            if ((!numeros.test(frase.charAt(i)) && frase.charAt(i) != " ")) {
+                alert(frase.charAt(i));
+                document.write(frase.charAt(i))
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

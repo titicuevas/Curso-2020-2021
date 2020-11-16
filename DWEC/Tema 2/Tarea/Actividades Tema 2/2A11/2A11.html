@@ -1,0 +1,50 @@
+<!--Realiza un script en el que un usuario introduzca un número, y vaya sumando cada una de
+sus cifras y devuelva el resultado.
+Modificaciones:
+• Si el número es decimal suma solo la parte entera
+• Si el número es decimal suma la parte entera y la decimal -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2A11</title>
+</head>
+
+<body>
+    <script>
+        var array = prompt("Introduce un numero");
+        var numeros = 0;
+        var arr = array.split(".");
+
+        var a1 = prompt("¿Que condicion quieres? (1 ó 2)")
+        var bol;
+        a1 == 1 ? bol = true : bol = false;
+
+        if (a1 == 1 || a1 == 2) {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    numeros = numeros + parseInt(arr[i].charAt(j))
+                }
+                if (bol) {
+                    alert("La suma de los numeros enteros es: " + numeros)
+                    break;
+                } else {
+                    if (i == arr.length - 1) {
+                        alert("El resultado final de todos los numeros es: " + numeros)
+                        document.write("El resultado final de todos los numeros es: " + numeros)
+                    }
+                }
+            }
+        } else {
+            alert("No has introducido valores validos  (1 o 2)")
+
+        }
+
+    </script>
+
+</body>
+
+</html>
