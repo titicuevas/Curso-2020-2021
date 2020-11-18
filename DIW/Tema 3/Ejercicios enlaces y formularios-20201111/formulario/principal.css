@@ -13,16 +13,13 @@ p,h1,h2,h3,h4,h5,h5,ol,ul {
 	padding: 0px;
 	
 }
-#nombre{
-
-}
-#correo{
-	margin-right: 100px;
-}
-#nivel{
-	text-align: left;
+p.label{
+	text-align: center;
 }
 
+p.input{
+	background-color: #000000;
+}
 
 
 br.clear {
