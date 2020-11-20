@@ -1,0 +1,8 @@
+Instalar composer
+
+mkdir pdf
+
+Buscar en packgist.org = mpdf
+
+composer require mpdf/mpdf
+
