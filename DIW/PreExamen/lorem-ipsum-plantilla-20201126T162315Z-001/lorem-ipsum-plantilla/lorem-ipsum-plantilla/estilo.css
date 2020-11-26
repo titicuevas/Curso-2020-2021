@@ -1,0 +1,23 @@
+u {
+    font-style: italic;
+    text-decoration: underline 4px blue;
+}
+
+titulo {}
+
+body {
+    text-align: justify;
+}
+
+#abajo {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#img {
+    background-image: url("129428-fox-face.svg");
+    background-repeat: repeat-x;
+    background-position: 30px;
+    height: 50px;
+}
