@@ -54,6 +54,13 @@ CREATE TABLE reparto
 
 );
 
+SELECT f.*, p.id, p.persona
+    FROM fichas f
+    LEFT JOIN reparto r
+    
+
+
+
 
 
 CREATE VIEW fichas_titulos AS
