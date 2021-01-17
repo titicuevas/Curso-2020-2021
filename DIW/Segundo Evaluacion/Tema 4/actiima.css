@@ -1,0 +1,20 @@
+.grid-container {
+    display: grid;
+    align-items: center;
+    grid-gap: 100px;
+}
+
+#uno {
+    border: 1px solid black;
+    background-image: url(ActividadCSS/fondo1.jpg);
+}
+
+#dos {
+    border: 1px solid black;
+    background-image: url(ActividadCSS/fondo1.jpg);
+}
+
+#tres {
+    border: 1px solid black;
+    background-image: url(ActividadCSS/fondo1.jpg);
+}
