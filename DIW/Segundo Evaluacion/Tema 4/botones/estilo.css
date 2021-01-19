@@ -1,0 +1,30 @@
+body {
+    margin: 2;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.b1:hover {
+    color: red;
+    transform: translate(50px, 80px);
+    transition: 3s, 2s;
+    background-color: yellow;
+}
+
+.b2:hover {
+    color: blue;
+    transition: 5s;
+    transform: rotate(360deg);
+    background-color: chartreuse;
+}
+
+.b3:hover {
+    color: yellow;
+    transition: 2s;
+    translate: skewY(5deg);
+    background-color: black;
+}
