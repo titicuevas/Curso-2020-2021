@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="hola.js"></script>
+</head>
+<body>
+    <form action="">
+        <label>Que sistema operativo movil te gusta mas ?</label>
+        <input type="radio"name="so" value="ios">iOS <br>
+        <input type="radio"name="so" value="android">Android <br>
+        <input type="radio"name="so" value="wp">Windows Phone <br>
+        <input type="radio"name="so" value="otros">Otros <br>
+        <input type="submit"id="bEnviar" value="Votar!">
+    </form>
+    <div id="resultados">
+        <meter min="0" max="5" value="0" id="ios"></meter>
+        IOS <br>
+        <meter min="0" max="5" value="0" id="android"></meter>
+        Android <br>
+        <meter min="0" max="5" value="0" id="wp"></meter>
+        Windows Phone <br>
+        <meter min="0" max="5" value="0" id="otros"></meter>
+        Otros<br>
+    </div>
+</body>
+</html>
