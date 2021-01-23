@@ -1,18 +1,26 @@
 body {
-    margin: 2;
-    margin-right: 5px;
+    background-color: blue;
+    
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    position: absolute; /* podría ser relative */
+ width: 200px;
+ height: 200px;
+ left: 100px;
+ top: 50px;
+    
+    
+    
 }
 
-.b1:hover {
+.b1:focus {
     color: red;
     transform: translate(50px, 80px);
-    transition: 3s, 2s;
+    transition: 3s;
+    transition-delay: 0s,1s;
     background-color: yellow;
+   border: 1px solid black;
+   
 }
 
 .b2:hover {
@@ -25,6 +33,27 @@ body {
 .b3:hover {
     color: yellow;
     transition: 2s;
-    translate: skewY(5deg);
+    transform: scale(2,3);
+    transition-duration: 1s;
     background-color: black;
+    
+}
+
+.b4:hover {
+    color:green;
+    transition: 2s;
+    transform: scaleX(3);
+    transform: scaleY(3);
+    background-color: pink;
+}
+
+.b5:focus {
+    color:green;
+    width: 100px;
+    height: 100px;
+    transition: 2s;
+    transform: scaleX(3);
+    background-color: brown;
+    transform: rotate(360deg);
+   
 }
