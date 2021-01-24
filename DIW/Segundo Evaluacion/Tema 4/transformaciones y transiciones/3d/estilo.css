@@ -1,0 +1,43 @@
+body{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    margin: 25%;
+ transition: all 3s;
+    
+}
+.box{
+    width: 200px;
+    height: 200px;
+    color: black;
+    background: white;
+    border: 1px solid;
+    transform: rotate3D(1,0,1,-90deg);
+    
+
+    
+    
+}
+
+.box2{
+    background: white;
+    width: 200px;
+    height: 200px;
+    color: aliceblue;
+    border: 1px solid;
+    transform: rotate3D(1,0,1,90deg);
+    
+    
+}
+.box3{
+    background: green;
+    width: 200px;
+    height: 200px;
+    color: aliceblue;
+    border: 1px solid;
+    transform: rotate3D(1,0,0,45deg);
+    
+    
+}
+
+
