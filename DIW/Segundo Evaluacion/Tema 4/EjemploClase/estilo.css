@@ -1,0 +1,25 @@
+.grid-contaier{
+    display: grid;
+    column-gap:10px; ;
+    row-gap:  10px;
+    height: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 50px 50px 50px;
+    justify-content: space-evenly;
+    align-content: center;
+    border: 2px blue solid;
+}
+
+
+.grid-item{
+    border: 1px red solid;
+    display: grid;
+    align-items: center;
+}
+
+.item1{
+    grid-row: 1/1;
+}
+.item2{
+    grid-area: 1/2/5/5;
+}

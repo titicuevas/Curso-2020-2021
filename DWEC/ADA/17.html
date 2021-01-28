@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function suma(a,b) {
+    if (b=== undefined) {
+        b=0;
+        return a+b;    
+    }
+    
+    
+}
+
+var resultado = suma (4);
+alert(resultado);
+
+
+function valores() {
+    alert ("El numero de argumentos es: "+arguments.length);
+    for (let i = 0; i < arguments.length; i++) {
+    alert("Argumentos"+i+"="+arguments[i]);
+    
+}
+
+}
+valores (4,6,8,2,6,7);
+
+    </script>
+</body>
+</html>
