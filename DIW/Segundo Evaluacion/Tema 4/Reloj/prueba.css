@@ -90,4 +90,6 @@
             height: 150px;
             background: green;
             border-radius: 1px 1px  0;
+            transform: rotate(360deg);
+            animation: infinite;
         }
