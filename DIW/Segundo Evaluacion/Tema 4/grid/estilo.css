@@ -1,0 +1,36 @@
+.grid{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "head head nav"
+                         "divs divs nav"
+                         "foote foote foote";
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 15% 80% 10%; 
+}
+header{
+    border: 1px solid;
+    grid-area: head;
+    background: rgba(207,216,220,255);
+    
+}
+nav{
+    
+    border: 1px solid;
+    grid-area: nav;
+    display: grid;
+    background: rgba(207,216,220,255);
+}
+
+.grid div{
+    border: 1px solid;
+    background: rgba(207,216,220,255);
+}
+
+
+
+
+footer{
+    border: 1px solid;
+    grid-area: foote;
+    background: rgba(207,216,220,255);
+}
