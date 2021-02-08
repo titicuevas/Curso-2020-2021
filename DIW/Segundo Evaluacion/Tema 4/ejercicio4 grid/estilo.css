@@ -1,0 +1,9 @@
+.card{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "head head nav"
+                         "divs divs nav"
+                         "foot foot foot";
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 15% 80% 10%; 
+}
