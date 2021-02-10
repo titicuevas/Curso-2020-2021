@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo 1</title>    
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="contenedorUno">
+        <fieldset>
+            <legend>DoñanaMarket:</legend>
+
+            <p>Bienvenido a esta web!</p>
+
+            <p>Entra en nuestra tienda <button id="entrarBtn">Entrar</button></p>
+
+            
+    <button onclick="ocultar()">Click</button>
+
+        </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+            <legend>DoñanaMarket:</legend>            
+
+            <div id="contenedorDos" style="display:none">
+                Nombre: <input type="text" id="nombre" onblur="validar()"><br>
+                Precio: <input type="text" id="precio" onblur="validar()"><br>
+                Stock: <input type="text" id="stock" onblur="validar()"><br>                
+                
+            </div>
+        </fieldset>
+
+        <button id="adminBtn" onclick="showAdministrador()">Adminitrador</button>
+    </div>
+
+    <div>
+        <fieldset id="productos">
+            <legend>DoñanaMarket:</legend>            
+
+            <h3>Nombre Precio Stock Selección</h3>
+
+
+        </fieldset>
+    </div>
+
+    <div id></div>
+
+</body>
+</html>

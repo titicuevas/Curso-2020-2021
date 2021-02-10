@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pruena Examen Bloque 1</title>
+    <script src="cookie.js"></script>
+    <script>
+        var Usuario = new Object();
+        Usuario.nombre = '';
+        Usuario.email = '';
+        Usuario.dni = '';
+        Usuario.rango = "invitado";
+
+        var control_nombre = false;
+        var control_email = false;
+        var control_dni = false;
+
+        function cambiar_modo(rango) {
+            Usuario.rango = rango; // Cambia el rango según el modo escogido
+
+            if (Usuario.rango == 'invitado') { // ------------------------------------------------------------------------- Invitado / LogOut
+                // comprobar si existe la cookie
+                    // borrar la cookie
+
+                // Ponemos los botones
+                document.getElementById("contenedorUno").innerHTML = 
+                    '<button id="login" onclick="cambiar_modo(\'registrado\')">Login</button>';
+
+                // Ponemos el texto de inicio
+                document.getElementById("contenedorDos").innerHTML = 
+                    'Bienvenido a esta web!<br>Pulsa login para entrar como usuario registrado';
+                
+
+            } else if (Usuario.rango == 'registrado') { // --------------------------------------------------------------- Registrado
+                // Ponemos botones
+                document.getElementById("contenedorUno").innerHTML = 
+                    "<button id='logout' onclick='cambiar_modo(\"invitado\")'>LogOut</button>"+
+                    "<button id='guardar_datos' onclick='guardar_datos()'  disabled>Guardar datos</button>"+
+                    "<button id='modo_admin' onclick='cambiar_modo(\"administrador\")'>Modo administrador</button>";
+                
+                // Ponemos formulario
+                document.getElementById("contenedorDos").innerHTML=
+                    "<label for='nombre'>Nombre</label>"+
+                    "<input type='text' id='nombre' name='nombre' onblur='comprobar_nombre()'><br><br>"+
+                    "<label for='email'>Email</label>"+
+                    "<input type='text' id='email' name='email' onblur='comprobar_email()'><br>";
+
+
+            } else if (Usuario.rango == 'administrador') { // ------------------------------------------------------------ Admin
+                // Borrar botón modo_admin
+                document.getElementById("modo_admin").remove();
+
+                // Ponemos formulario
+                document.getElementById("contenedorDos").innerHTML=
+                    "<label for='nombre'>Nombre</label> "+
+                    "<input type='text' id='nombre' name='nombre' onblur='comprobar_nombre()'><br><br>"+
+                    "<label for='email'>Email</label>"+
+                    "<input type='text' id='email' name='email' onblur='comprobar_email()'><br><br>"+
+                    "<label for='dni'>DNI</label>"+
+                    "<input type='text' id='dni' name='dni' onblur='comprobar_dni()'><br>";
+
+                
+            }
+        }
+
+        function habilitar_guardar_registrado(control_nombre, control_email) {
+            if (control_nombre && control_email) {
+                document.getElementById("guardar_datos").disabled = false;
+            } else {
+                document.getElementById("guardar_datos").disabled = true;
+            }
+        }
+
+        function habilitar_guardar_admin(control_nombre, control_email, control_dni) {
+            if (control_nombre && control_email && control_dni) {
+                document.getElementById("guardar_datos").disabled = false;
+            } else {
+                document.getElementById("guardar_datos").disabled = true;
+            }
+        }
+
+        function isDNI(number, letter) {
+            if(!isNaN(number) 
+                && isNaN(letter) 
+                && number.toString().length === 8
+                && letter.length === 1) {
+                let lettersOrder ='TRWAGMYFPDXBNJZSQVHLCKET';
+                if(lettersOrder[number % 23] === letter.toUpperCase()) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function comprobar_nombre() {
+            var nombre = document.getElementById("nombre").value;
+            console.log(nombre);
+            if (nombre.length != 0) {
+                // valido
+                control_nombre = true;
+            } else {
+                // error
+                control_nombre = false;
+                // Si es incorrecto alert personalizado y foco al campo (focus)
+            }
+
+            if (Usuario.rango == 'registrado') {
+                habilitar_guardar_registrado(control_nombre, control_email);
+            } else if (Usuario.rango == 'administrador') {
+                habilitar_guardar_admin(control_nombre, control_email, control_dni);
+            }
+        }
+
+        function comprobar_email() {
+            var email = document.getElementById("email").value;
+            if (email.indexOf('@') != -1) {
+                // valido
+                control_email = true;
+            } else {
+                // error
+                control_email = false;
+                // Si es incorrecto alert personalizado y foco al campo (focus)
+            }
+
+            if (Usuario.rango == 'registrado') {
+                habilitar_guardar_registrado(control_nombre, control_email);
+            } else if (Usuario.rango == 'administrador') {
+                habilitar_guardar_admin(control_nombre, control_email, control_dni);
+            }
+        }
+
+        function comprobar_dni() {
+            var dni = document.getElementById("dni").value;
+            var dni_numero = dni.substr(0, dni.length-1);
+            var dni_letra = dni.substr(dni.length-1, 1);
+            var dni_correcto = isDNI(dni_numero, dni_letra);
+
+            if (dni_correcto) {
+                // valido
+                control_dni = true;
+            } else {
+                // error
+                control_dni = false;
+                // Si es incorrecto alert personalizado y foco al campo (focus)
+            }
+
+            if (Usuario.rango == 'registrado') {
+                habilitar_guardar_registrado(control_nombre, control_email);
+            } else if (Usuario.rango == 'administrador') {
+                habilitar_guardar_admin(control_nombre, control_email, control_dni);
+            }
+        }
+
+        function guardar_datos() {
+            if (Usuario.rango == 'registrado') {
+                var nombre = document.getElementById("nombre").value;
+                var email = document.getElementById("email").value;
+
+                if (nombre.length != 0 && email.length != 0) {
+                    Usuario.nombre = nombre;
+                    Usuario.email = email;
+                
+                    // Guardar datos en la cookie
+
+                }
+            } else if (Usuario.rango == 'administrador') {
+                var nombre = document.getElementById("nombre").value;
+                var email = document.getElementById("email").value;
+                var dni = document.getElementById("dni").value;
+
+                if (nombre.length != 0 && email.length != 0 && dni.length != 0 ) {
+                    Usuario.nombre = nombre;
+                    Usuario.email = email;
+                    Usuario.dni = dni;
+
+                    // Guardar datos en la cookie
+                    
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="principal">
+
+        <fieldset>
+            <div id="contenedorUno">
+            <button id="login" onclick="cambiar_modo('registrado')"> login</button> 
+            </div>  
+        </fieldset>
+    
+        <fieldset>
+            <legend>Datos usuario</legend>
+            <div id="contenedorDos">Bienvenido a esta web!
+            <br>Pulsa login para entrar como usuario registrado</div>
+        </fieldset>
+    </div> 
+</body>
+
+</html>
