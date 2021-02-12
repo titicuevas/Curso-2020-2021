@@ -1,0 +1,40 @@
+*{
+    background-color: blue;
+}
+
+.contenedor{
+    background-color: crimson;
+    display: flex;
+    border: 1px solid;
+    padding: 1em;
+
+}
+.contenedor div{
+    display: flex;
+}
+
+header{
+    background-color:brown;
+    display: flex;
+    padding: 1 em;
+}
+header div{
+    background-color: brown;
+    border: 1px solid;
+    padding: 1em;
+}
+footer{
+    background-color: cornflowerblue;
+    display: flex;
+    border: 1px solid;
+    flex-wrap: unset;
+}
+
+footer div{
+    height: 100px;
+    width: 100px;
+    background-color: darkblue;
+    display: flex;
+    border: 1px solid;
+}
+

@@ -1,0 +1,28 @@
+h1{
+    color: white;
+    background-color: black;
+    text-align: center;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+    transition-property: color, background-color;
+}
+
+h1:hover{
+    color: red;
+    background-color: white;
+}
+
+
+.caja{
+    background-color: green;
+    border-radius: 0%;
+    height: 200px;
+    margin: 30px auto;
+    transition: all 1s linear;
+    width: 200px;
+}
+
+.caja:hover{
+    background-color: yellow;
+    border-radius: 50%;
+}

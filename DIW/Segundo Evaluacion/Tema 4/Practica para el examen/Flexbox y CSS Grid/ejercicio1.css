@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+.contenedor{
+    color: black;
+    margin: 20px auto;
+    width: 90%;
+
+}
+h1,h4,p{
+    margin: 0px;
+}
