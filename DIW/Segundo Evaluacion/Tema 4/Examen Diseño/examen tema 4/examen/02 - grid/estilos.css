@@ -1,0 +1,81 @@
+.contenedor {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-gap: 5px;
+    position: absolute;
+    grid-template-areas: "cabecera . . ." "menu1 menu2 menu3 menu4" "lateralizq1 imagencentral lateralder1" "lateralizq1 imagencentral lateralder1" "lateralizq2 . . lateralder1" "lateralizq2 textocentral textocentral lateralder1" ". . . footer";
+}
+
+#cuerpo {
+    width: 95%;
+}
+
+.imagen {
+    width: 80%;
+}
+
+#cabecera {
+    width: 100%;
+}
+
+#menu1 {
+    background-color: cadetblue;
+    grid-area: menu1;
+}
+
+#menu2 {
+    background-color: cadetblue;
+    grid-area: menu2;
+}
+
+#menu3 {
+    background-color: cadetblue;
+    grid-area: menu3;
+}
+
+#menu4 {
+    background-color: cadetblue;
+    grid-area: menu4;
+}
+
+#lateralizq1 {
+    background-color: gray;
+    grid-area: lateralizq1;
+}
+
+#lateralizq2 {
+    background-color: chocolate;
+    grid-area: lateralizq2;
+}
+
+#imagencentral {
+    background-color: cornflowerblue;
+    grid-area: imagencentral;
+}
+
+#textocentral {
+    background-color: darksalmon;
+    grid-area: textocentral;
+}
+
+#lateralder1 {
+    background-color: khaki;
+    grid-area: lateralder1;
+}
+
+#footer {
+    background-color: lavender;
+    grid-area: footer;
+}
+
+@media screen and (min-width:800px) {
+    .imagen {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .imagen {
+        width: 40%;
+    }
+}

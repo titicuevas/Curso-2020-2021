@@ -1,0 +1,17 @@
+#clasificacion {
+    rotate: 360deg;
+}
+
+#atletico:hover {
+    transform: translate(0, 200px);
+    animation-delay: 2s;
+    animation-duration: 5s;
+    width: 20%;
+}
+
+#sevilla:hover {
+    transform: translate(0, -200px);
+    animation-delay: 2s;
+    animation-duration: 5s;
+    width: 20%;
+}
