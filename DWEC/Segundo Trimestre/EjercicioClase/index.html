@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function () {
+
+
+
+            function solicitarInformacion() {
+                console.log("hola");
+                let request = new XMLHttpRequest();
+                request.open("GET", "https://reqres.in/api/users");
+                request.onreadystatechange = comprobarEstado; request.send()
+                request.send();
+
+
+
+            }
+
+
+
+
+            function comprobarEstado() {
+                let request = this;
+
+
+                if (request.readyState == 4 && request.status == 200) {
+                    let respuestaJson = JSON.parse(request.responseble);
+                    let paginaActual = respuestaJson.page;
+                    let totalPaginas = respuestaJson.total_pages;
+                    let usuarios = respuestaJson.data;
+
+
+                    let div = $("<div>")
+                    div.text = ("Pagina Actual " + paginaActual + "de "+ totalPaginas);
+                    
+                    console.log
+
+
+
+                    for(usuario of usuarios){
+                        let id = usuario.id;
+                        let nombre = usuario.first_name;
+                        let apellido = usuario.last_name;
+                        let email = usuario.email;
+                        
+                        let fila = $("<tr>")
+
+                            let tdId = $("<td>")
+                                tdId.text(id)
+                            let tdNombre = $("<td>")
+                                tdNombre.text(nombre)
+                            let tdApellido = $("<td>")    
+                                tdApellido.text(apellido)
+                            let tdEmail = $ ("<td>")
+                                tdEmail.text(email)
+
+                    
+                    
+                    }
+
+                    $("body").append(div);
+
+
+                }
+            }
+
+            $("#botonSolicitar").click(solicitarInformacion);
+            $("table").hide();
+        });
+    </script>
+</head>
+
+<body>
+    <button id="botonSolicitar">Solicitar Boton</button>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>nombre</th>
+            <th>apellido</th>
+            <th>email</th>
+            <th>ID</th>
+        </tr>
+    </table>
+
+</body>
+
+</html>
