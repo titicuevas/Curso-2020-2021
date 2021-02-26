@@ -1,0 +1,40 @@
+section {
+    display: flex;
+    width: 98%;
+    height: 95vh;
+    padding: 10px;
+    background-color: blanchedalmond;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+
+  }
+   
+  div {
+    width: 30%;
+    height: 30%;
+    background-color: palevioletred;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 30%;
+    
+    
+  
+  }
+
+  #abajo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end
+    
+  }
+
+  #derecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }

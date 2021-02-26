@@ -1,0 +1,14 @@
+#borde1 {
+    height: 50px;
+    width: 100%;
+    background: url(BORDE.png);
+    background-repeat: repeat-x;
+}
+
+#borde2 {
+    height: 50px;
+    width: 100%;
+    background: url(BORDE.png);
+    background-repeat: repeat-x;
+
+}
