@@ -1,0 +1,123 @@
+#cuerpo {
+    width: 95%;
+    display: grid;
+    grid-template-areas: "menu1 menu2 menu3 menu4 menu5" "lateralizq1 . imagencentral . lateralder1" "lateralizq1 . imagencentral .  lateralder1" "lateralizq1 textoizquierdo . . lateralder1" "lateralizq1 . textocentral . lateralder1" "lateralizq1 . . textoderecho lateralder1" ". . . . footer";
+}
+
+.imagen {
+    width: 80%;
+}
+
+#cabecera {
+    width: 100%;
+}
+
+#menu1 {
+    background-color: cadetblue;
+    grid-area: menu1;
+    margin-right: 15px;
+}
+
+#menu2 {
+    background-color: cadetblue;
+    grid-area: menu2;
+    margin-right: 15px;
+}
+
+#menu3 {
+    background-color: cadetblue;
+    grid-area: menu3;
+    margin-right: 15px;
+}
+
+#menu4 {
+    background-color: cadetblue;
+    grid-area: menu4;
+    margin-right: 15px;
+}
+
+#menu5 {
+    background-color: cadetblue;
+    grid-area: menu5;
+}
+
+#lateralizq1 {
+    background-color: gray;
+    grid-area: lateralizq1;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#textocentral {
+    background-color: darksalmon;
+    grid-area: textocentral;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#textoderecho {
+    background-color: darksalmon;
+    grid-area: textoderecho;
+    margin-top: 15px;
+}
+
+#textoizquierdo {
+    background-color: darksalmon;
+    grid-area: textoizquierdo;
+}
+
+#lateralder1 {
+    background-color: khaki;
+    grid-area: lateralder1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+#footer {
+    background-color: lavender;
+    grid-area: footer;
+    margin-top: 15px;
+}
+
+#imagencentral {
+    background-color: dodgerblue;
+    grid-area: imagencentral;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width:800px) {
+    #cuerpo {
+        width: 95%;
+    }
+    .imagen {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #textoizquierdo {
+        background-color: gray;
+    }
+    #lateralder1 {
+        display: none;
+    }
+}
+
+
+/*
+grid-template-areas: "menu1 menu2"
+"menu3 menu4"
+"menu5 menu5"
+". ."
+"imagencentral imagencentral"
+"lateralizq1 textoizquierdo"
+"textocentral textoderecho"
+"footer .";
+
+Asi quedaria el fichero reducido añadiendile un margin top , right de 10px
+#lateralder1 {
+        display: none;
+    }  **Serviria para ocultar la parte derecha
+    */

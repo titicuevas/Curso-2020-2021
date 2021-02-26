@@ -1,0 +1,25 @@
+.img_mario {
+    width: 50px;
+}
+
+#mario {
+    position: absolute;
+    top: 330px;
+    left: 330px;
+    animation-delay: 2s;
+    animation-name: subir;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes subir {
+    100% {
+        transform: translate(0px, -200px);
+    }
+}
+
+
+/*Para hacer el efecto de crecer es con transform: scale(1) 
+transform: scale(2)
+transform: scale(1)
+No me sale al poner , pero se que son esas propiedades.*/
