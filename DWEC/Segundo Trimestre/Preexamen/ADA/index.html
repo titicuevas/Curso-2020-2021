@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="texto">
+        <h1>AJAX</h1>
+        <button id="cambiar">Cambiar el contenido</button>
+    </div>
+    <script>
+        document.getElementById("cambiar").addEventListener("click",cambiar);
+function cambiar() {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+        if (this.readyState ==4 && this.status == 220) {
+            document.getElementById("texto").innerHTML = this.responseText;
+            
+        }
+    };
+    //.open : especificar solicitud
+    //-GET/POST
+    //-Archivo: txt,php
+    //-true/false: metodo de envio
+    xhr.open("GET", "holamundo.txt",true);
+    //.send enviar la solicitud al servidor.
+    //Si utilizamos POST debemos pasar los datos por parametros.
+
+    xhr.send();
+
+    console.log("cambiar")
+}
+    </script>
+</body>
+
+
+</html>

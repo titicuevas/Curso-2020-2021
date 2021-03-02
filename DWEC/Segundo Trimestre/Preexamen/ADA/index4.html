@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var objeto1 = {"nombre":"Enrique","nacimiento": 1989, "pais":"España"};
+//Acceso: utilizamos la notacion punto
+        alert(objeto1.nombre + " " + objeto1.nacimiento + " " + objeto1.pais);
+//Recorrer los nombres de un objeto
+       // for (var x in objeto1){
+         //   document.getElementById("demo").innerHTML += x + ":" + objeto1[x]+ "<br/>";
+       // }
+            //Objeto que contiene otros objetos
+        var objeto2 = {"nombre":"Enrique","nacimiento": 1989, "pais":"España", "hijos":{
+            "hijo1":"Juan",
+            "hijo2":"Pepe",
+            "hijo3":"Jose"
+        }
+    }
+
+    //Acceder a un objto dentro de otro objeto
+    var y = objeto2.hijos.hijo1;
+    alert("Hijo1 es "+ y);
+
+    //Arrays : nombre del array, y entre corchetes los valores
+    var objeto3 = {
+        "hijos":["Juan,Pepe,Jose"]
+    }
+    //Acceso 
+    var z = objeto3.hijos[0];
+    alert("Hijo 2 es "+z);
+
+    //Recorrer elementos de un array
+
+    var z1 = "";
+    for (var i in objeto3.hijos) {
+        z1 += objeto3.hijos[i]+",";
+        
+    }
+    //document.getElementById("demo").innerHTML+= "Todos los hijos:"+z1+"<br/>";
+
+
+    var z2 ="";
+    for (let index = 0; index < objeto3.hijos.length; index++) {
+        z2 += objeto3.hijos[i];
+        
+    }
+    //document.getElementById("demo").innerHTML+= "Todos los hijos: "+z2+"<br/>"
+
+
+
+    </script>
+</head>
+<body>
+    <div id="demo"></div>
+</body>
+</html>
