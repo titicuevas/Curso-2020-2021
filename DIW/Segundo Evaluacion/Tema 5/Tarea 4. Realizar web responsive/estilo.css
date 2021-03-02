@@ -1,0 +1,14 @@
+#contenedor {
+    /*Movil*/
+    @media (max-width: @screen-sm-min) {
+        button {
+            font-size: 16px;
+        }
+    }
+    /*Tablet*/
+    @media (max-width:@screen-md-min) {
+        #button {}
+    }
+    /*Portatiles*/
+    @media (max-width:@screen-lg-min) {}
+}
