@@ -16,8 +16,25 @@
             
         }
         
-        #numero{
+        #numero1,#numero2,#numero3{
             font-size: 50px;
+        }
+
+        @media (max-width: 575px){
+            #cabecera{
+                background-color: green !important;
+            }
+        }
+        @media (max-width: 767px) and (min-width: 576px) {
+            #cabecera{
+                background-color: blue  !important;
+            }
+             #numero2{
+                background-color: red !important;  
+             }
+             #numero3{
+                 background-color: green !important;
+             }
         }
        
        
@@ -31,9 +48,9 @@
     <div id="contenedor">
         <div id="cabecera" class="col-12 text-sm-left  bg-light">Header</div>
         <div class="row">
-            <div id="numero" class="col-12   col-sm-6 row-md-cols-6 col-md-4 text-left text-md-center  bg-danger">1</div>
-            <div id="numero" class="col-12  col-sm-6 row-md-cols-6 col-md-4 bg-info text-sm-right text-md-center">2</div>
-            <div id="numero" class="col-12 text-right row-md-cols-6 col-md-4 text-sm-center text-md-center bg-danger">3</div>
+            <div id="numero1" class="col-12   col-sm-6 row-cols-md-6 row-md col-md-4 text-left text-md-center  bg-danger">1</div>
+            <div id="numero2" class="col-12  col-sm-6 row-md-cols-6 col-md-4 bg-info text-sm-right text-md-center">2</div>
+            <div id="numero3" class="col-12 text-right row-md-cols-6 col-md-4 text-sm-center text-md-center bg-danger">3</div>
             <div class="col-12 col-md-6 bg-warning">Footer 1</div>
             <div class="col-12 col-md-6 bg-warning">Footer 2</div>
             
