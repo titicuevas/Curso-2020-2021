@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="examen.js"></script>
+</head>
+<body>
+   <div id="contenedorUno">
+    <fieldset>
+        <legend>IES Doñana</legend>
+        <p>Bienveni@ a nuestro centro!</p>
+        <p>Entra a tu zona <button id="zona">Zona Alumn@s</button></p>
+
+    </fieldset>
+</div>
+
+<div>
+    <fieldset>
+        <legend>IES Doñana</legend>
+    
+        <div id="contenedorDos" style="display: none;">
+            Nombre: <input type="text" id="nombre"onblur="validar"><br>
+            Id: <input type="text" id="id"onblur="validar"><br>
+           
+            
+       
+        </div>
+       
+        
+    </fieldset>
+</div><br>
+<button id="admin" onclick="mostrarAdmin()">Administrador</button>
+
+<div id="contenedorDos" style="display: none;">
+    Nombre: <input type="text" id="nombre"onblur="validar"><br>
+    Id: <input type="text" id="id"onblur="validar"><br>
+   
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
